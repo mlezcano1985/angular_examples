@@ -1,6 +1,6 @@
-# @mlezcano1985 component's examples
+# Angular Component's examples
 
-Pack of examples of @mlezcano1985's components
+Pack of examples of angular's components
 
 # Steps:
 - Clone or download the project.
