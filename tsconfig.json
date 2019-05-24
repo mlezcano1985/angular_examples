@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-rut-formatter": [
+        "dist/ngx-rut-formatter"
+      ],
+      "ngx-rut-formatter/*": [
+        "dist/ngx-rut-formatter/*"
+      ]
+    }
   }
 }

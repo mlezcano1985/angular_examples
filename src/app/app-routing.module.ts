@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxRutFormatterComponent } from './ngxRutFormatter/ngx-rut-formatter.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'ngxRutFormatter',
+    component: NgxRutFormatterComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

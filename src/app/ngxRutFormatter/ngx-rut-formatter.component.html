@@ -1,0 +1,40 @@
+<div>
+    <h1>NgxRutFormatter example</h1>
+
+    <div>
+        <h2>Use as directive</h2>
+        <form name="f">
+            modelRut: {{modelRut}}
+            <br>
+
+            <input type="text" name="rut" ngxRutFormatter name="text" [(ngModel)]="modelRut" #modelRutInput="ngModel"
+                required>
+            <input type="button" value="submit" [disabled]="modelRutInput.errors">
+            <br/>
+            
+            Errors:
+            <pre>
+                {{modelRutInput.errors | json}}
+            </pre>
+        </form>
+    </div>
+
+    <div>
+        <h2>Use as Pipe</h2>
+        <table class="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Original value</th>
+                    <th>Formatter value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let value of items">
+                    <td>{{value}}</td>
+                    <td>{{value | ngxRutFormatter}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

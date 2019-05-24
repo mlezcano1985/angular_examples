@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "NgxRutFormatter": {
+      "root": "projects/ngx-rut-formatter",
+      "sourceRoot": "projects/ngx-rut-formatter/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-rut-formatter/tsconfig.lib.json",
+            "project": "projects/ngx-rut-formatter/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-rut-formatter/src/test.ts",
+            "tsConfig": "projects/ngx-rut-formatter/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-rut-formatter/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-rut-formatter/tsconfig.lib.json",
+              "projects/ngx-rut-formatter/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-app"
